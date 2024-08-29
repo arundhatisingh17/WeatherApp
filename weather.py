@@ -26,8 +26,20 @@ def get_lat_long(city_name, state_code, country_code, API_key):
 
 
 def get_current_weather(lat, long, API_key):
-    resp = requests.get(f'https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={long}&appid={API_key}&units=metric').json() # kelvin to celsius 
-    print(resp)
+    resp = requests.get(f'https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={long}&appid={API_key}&units=metric').json() # kelvin to celsius
+    data = weatherData(
+        main = resp.get('weather')[0].get('main'),
+        description = resp.get('weather')[0].get('description'),
+        icon = resp.get('weather')[0].get('icon'),
+        temperature = resp.get('main').get('temp'),
+    )
+    return data
+
+
+def main(city_name, state_name, current_name):
+    lat, long = get_lat_long(city_name, state_name, current_name, api_key)
+    return get_current_weather(lat, long, api_key) # passing the latitude and the longitude to the function to get information about the weather
+    
     
 
 
@@ -36,4 +48,4 @@ def get_current_weather(lat, long, API_key):
 
 if __name__ == '__main__':
     lat, long = get_lat_long('Toronto', 'ON', 'Canada', api_key)
-    get_current_weather(lat, long, api_key) # passing the latitude and the longitude to the function to get information about the weather
+    print(get_current_weather(lat, long, api_key)) # passing the latitude and the longitude to the function to get information about the weather
