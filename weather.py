@@ -13,7 +13,7 @@ class weatherData:
     main: str
     description: str
     icon: str
-    temperature: str
+    temperature: int
 
 
 
@@ -31,7 +31,7 @@ def get_current_weather(lat, long, API_key):
         main = resp.get('weather')[0].get('main'),
         description = resp.get('weather')[0].get('description'),
         icon = resp.get('weather')[0].get('icon'),
-        temperature = resp.get('main').get('temp'),
+        temperature = int(resp.get('main').get('temp')),
     )
     return data
 
