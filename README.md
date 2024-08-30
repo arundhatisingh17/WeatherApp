@@ -1,6 +1,11 @@
 I developed a dynamic weather application that leverages the OpenWeatherMap API to provide real-time weather information based on user input. The app offers a seamless, interactive experience, allowing users to input any city and instantly receive up-to-date weather details, making it a convenient tool for staying informed about weather conditions around the world.
 
 
+
+
+
+
+
 How It Works:
   1) User Input: The application allows users to enter the name of any city they wish to check the weather for.
   2) API Integration: Once the user inputs a city, the app fetches the corresponding latitude and longitude coordinates. These coordinates are passed to the OpenWeatherMap API, which returns accurate, real-time weather data for that specific location.
@@ -8,11 +13,18 @@ How It Works:
   4) Responsive Design: The app uses Bootstrap CSS to ensure that the interface is visually appealing, organized, and responsive across different screen sizes and devices. The weather information is neatly presented within a user-friendly layout that       enhances the overall experience.
 
 
+
+
+
+
      
 Technologies Used:
   1) OpenWeatherMap API: The core of the application’s functionality, providing access to current weather data based on geographic coordinates (latitude and longitude).
   2) Flask: The web framework used to render HTML templates and manage backend logic, ensuring smooth communication between the frontend and the weather API.
   3) Bootstrap: Bootstrap's CSS functionalities are utilized to structure and style the HTML elements, creating a clean, responsive user interface.
+
+
+
 
      
      
