@@ -14,6 +14,9 @@
 <body class = "bg-peach text-dark">
     <div class = "text-center">
         <h1 class = "mt-5">Weather App</h1>
+        <small class="text-muted">Arundhati Singh</small>
+        <br>
+        <br>
         <form action = "/" method = "post">
             <div class = "container">
                 <div class = "row">
@@ -33,13 +36,40 @@
             </div>
             <br>
             <button class="submit btn btn-light">Find</button>
+            
         </form>
         {% if weather %}
+        <br>
+        <br>
+        <br>
         {{ weather.main }} : {{weather.description}} <br>
         <img src = " https://openweathermap.org/img/wn/{{weather.icon}}@2x.png" alt = "weather icon"/>
         {{weather.temperature}} C
         {% endif %}
-    </div>
+        <br>
+        <style>
+            .btn-dark-peach{
+                background-color: #b06346;
+                color: white;
+            }
+            .btn-dark-peach:hover{
+                background-color: #ff6347;
+                color: white;
+            }
+        </style>
+        <div class="d-flex flex-column align-items-end position-absolute top-0 end-0 mt-3 me-3">
+            <button class="btn btn-info btn-dark-peach btn-sm" data-bs-toggle="collapse" data-bs-target="#companyInfo" aria-expanded="false" aria-controls="companyInfo">
+                PM Accelerator Info
+            </button>
+            <div class="collapse mt-3 ms-5" id="companyInfo" style="width:auto; max-width: 250px;">
+                <div class="card card-body">
+                    <h5>About the Company</h5>
+                    <p>PM Accelerator is the premier AI learning and development hub, featuring award-winning AI products and mentors from top-tier companies such as Google, Meta, and Apple. We offer a dynamic AI PM Bootcamp, designed to empower the next generation of AI professionals through hands-on experience, mentorship, and real-world projects.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
