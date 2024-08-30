@@ -1,3 +1,6 @@
+Link to app - https://weather-app-proj-29e006a9512c.herokuapp.com/
+
+
 I developed a dynamic weather application that leverages the OpenWeatherMap API to provide real-time weather information based on user input. The app offers a seamless, interactive experience, allowing users to input any city and instantly receive up-to-date weather details, making it a convenient tool for staying informed about weather conditions around the world.
 
 
