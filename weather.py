@@ -36,8 +36,8 @@ def get_current_weather(lat, long, API_key):
     return data
 
 
-def main(city_name, state_name, current_name):
-    lat, long = get_lat_long(city_name, state_name, current_name, api_key)
+def main(city_name, state_name, current_name, API_key):
+    lat, long = get_lat_long(city_name, state_name, current_name, API_key)
     return get_current_weather(lat, long, api_key) # passing the latitude and the longitude to the function to get information about the weather
     
     
