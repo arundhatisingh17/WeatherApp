@@ -43,8 +43,11 @@
         <br>
         <br>
         {{ weather.main }} : {{weather.description}} <br>
-        <img src = " https://openweathermap.org/img/wn/{{weather.icon}}@2x.png" alt = "weather icon"/>
-        {{weather.temperature}} C
+        <img src="https://openweathermap.org/img/wn/{{weather.icon}}@2x.png" alt="weather icon" />
+        {{weather.temperature}} °C <br>
+        Feels Like: {{weather.temperature_fl}} °C <br>
+        Temp Min: {{weather.temperature_min}} °C &nbsp;&nbsp; Temp Max: {{weather.temperature_max}} °C <br>
+        Wind Speed: {{weather.wind_speed}} m/s <br>
         {% endif %}
         <br>
         <style>
